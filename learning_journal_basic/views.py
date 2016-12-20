@@ -4,30 +4,31 @@ import os
 
 THIS_DIR = os.path.dirname(__file__)
 
+
 def list_page(request):
     """View list page."""
-    file_path = os.path.join(THIS_DIR, 'templates', 'home.html').read()
+    file_path = os.path.join(THIS_DIR, 'templates', 'home.html')
     file_data = io.open(file_path).read()
     return Response(file_data)
 
 
 def detail_page(request):
     """View detail page."""
-    file_path = os.path.join(THIS_DIR, 'data', 'sample.html').read()
+    file_path = os.path.join(THIS_DIR, 'data', 'sample.html')
     file_data = io.open(file_path).read()
     return Response(file_data)
 
 
 def create_page(request):
     """View create page."""
-    file_path = os.path.join(THIS_DIR, 'templates', 'new_entry.html').read()
+    file_path = os.path.join(THIS_DIR, 'templates', 'new_entry.html')
     file_data = io.open(file_path).read()
     return Response(file_data)
 
 
 def update_page(request):
-        """View update page."""
-    file_path = os.path.join(THIS_DIR, 'templates', 'edit_entry.html').read()
+    """View update page."""
+    file_path = os.path.join(THIS_DIR, 'templates', 'edit_entry.html')
     file_data = io.open(file_path).read()
     return Response(file_data)
 
