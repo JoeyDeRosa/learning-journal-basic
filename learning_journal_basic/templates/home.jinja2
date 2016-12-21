@@ -1,0 +1,11 @@
+{% extends "layout.jinja2" %}
+  {% block body %}
+    <a href="/journal/new-entry">New Entry</a>
+    <section>
+      <ul>
+        {% for item in title_list %}
+          <li><a href="/journal/{{title_list[item]['id']}}">{{title_list[item]['title']}}</a></li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endblock %}
